@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hu">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description"
-    content="Project Reality — The premier MTA San Andreas Roleplay server. Experience immersive roleplay, a thriving economy, and a passionate community.">
+    content="Project Reality — Magyarország vezető MTA San Andreas Roleplay szervere. Élj meg egy élethű szerepjátékot és csatlakozz a közösségünkhöz.">
   <meta property="og:title" content="Project Reality | MTA SA Roleplay">
-  <meta property="og:description" content="The premier MTA San Andreas Roleplay experience.">
+  <meta property="og:description" content="Magyarország vezető MTA San Andreas Roleplay szervere.">
   <title>Project Reality | MTA San Andreas Roleplay</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Rajdhani:wght@500;600;700&display=swap"
     rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="apple-touch-icon" href="logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
-
-  <!-- ═══ NAVIGATION ═══ -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
       <a href="#" class="nav-logo">
         <img src="logo.png" alt="Project Reality Logo" class="nav-logo-img">
-        <span class="nav-logo-text">Project <span class="accent-green">Reality</span></span>
+        <span class="nav-logo-text">Project <span class="accent-blue">Reality</span></span>
       </a>
 
       <ul class="nav-links" id="navLinks">
@@ -34,7 +34,7 @@
               <path
                 d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2" />
             </svg>
-            <span>News</span>
+            <span>Hírek</span>
           </a>
         </li>
         <li>
@@ -43,7 +43,7 @@
               <path
                 d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
             </svg>
-            <span>Forum</span>
+            <span>Fórum</span>
           </a>
         </li>
         <li>
@@ -52,73 +52,72 @@
               <path
                 d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
             </svg>
-            <span>Premium Shop</span>
+            <span>Prémium Shop</span>
           </a>
         </li>
       </ul>
 
       <div class="nav-actions">
-        <a href="#" class="btn btn-ghost" id="btn-login">Login</a>
-        <a href="#" class="btn btn-primary" id="btn-register">Register</a>
+        <a href="#" class="btn btn-ghost" id="btn-login">Bejelentkezés</a>
+        <a href="#" class="btn btn-primary" id="btn-register">Regisztráció</a>
       </div>
 
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <button class="hamburger" id="hamburger" aria-label="Menü">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
-  <!-- ═══ HERO ═══ -->
   <header class="hero" id="hero">
     <div class="hero-bg">
-      <img src="hero_background.png" alt="GTA San Andreas Cityscape" class="hero-bg-img">
+      <img src="weboldal.jpg" alt="GTA San Andreas" class="hero-bg-img">
       <div class="hero-overlay"></div>
       <div class="hero-particles" id="heroParticles"></div>
     </div>
 
     <div class="hero-content">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        <span>Server Online</span>
-      </div>
-
       <div class="hero-logo-wrap">
         <img src="logo.png" alt="Project Reality" class="hero-logo" id="heroLogo">
         <div class="hero-logo-glow"></div>
       </div>
 
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Szerver Online</span>
+      </div>
+
       <h1 class="hero-title">
-        Project <span class="accent-green">Reality</span>
+        Project <span class="accent-blue">Reality</span>
       </h1>
       <p class="hero-subtitle">MTA San Andreas Roleplay</p>
-      <p class="hero-desc">Immerse yourself in the most authentic roleplay experience.<br>A living, breathing world.
-        Your story begins here.</p>
+      <p class="hero-desc">Éld meg a leghitelesebb szerepjáték-élményt.<br>Egy élő, lélegző világ — a te történeted itt
+        kezdődik.</p>
 
       <div class="hero-stats">
         <div class="hero-stat">
-          <span class="hero-stat-val" id="heroPlayers">847</span>
-          <span class="hero-stat-label">Online Now</span>
+          <span class="hero-stat-val" id="heroPlayers">?</span>
+          <span class="hero-stat-label">Online most</span>
         </div>
         <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <span class="hero-stat-val">12,400+</span>
-          <span class="hero-stat-label">Registered</span>
+          <span class="hero-stat-val">?</span>
+          <span class="hero-stat-label">Regisztrált</span>
         </div>
         <div class="hero-stat-divider"></div>
         <div class="hero-stat">
-          <span class="hero-stat-val">6</span>
-          <span class="hero-stat-label">Years Running</span>
+          <span class="hero-stat-val">?</span>
+          <span class="hero-stat-label">Nyitás</span>
         </div>
       </div>
 
       <div class="hero-cta">
-        <a href="#" class="btn btn-primary btn-lg" id="btn-play">Play Now</a>
-        <a href="#" class="btn btn-outline btn-lg" id="btn-learn">Learn More</a>
+        <a href="#" class="btn btn-primary btn-lg" id="btn-play">Játék most</a>
+        <a href="#" class="btn btn-outline btn-lg" id="btn-learn">Tudj meg többet</a>
       </div>
 
       <div class="hero-connect">
-        <span class="connect-label">Connect:</span>
-        <code class="connect-addr" id="serverAddr">play.projectreality.gg</code>
+        <span class="connect-label">Csatlakozás:</span>
+        <code class="connect-addr" id="serverAddr">141.95.108.15:22003</code>
         <button class="copy-btn" id="copyBtn" onclick="copyAddr()">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <rect x="9" y="9" width="13" height="13" rx="2" />
@@ -129,22 +128,20 @@
     </div>
 
     <div class="hero-scroll">
-      <span>Scroll</span>
+      <span>Görgess</span>
       <div class="scroll-line"></div>
     </div>
   </header>
 
-  <!-- ═══ SERVER STATUS CARDS ═══ -->
   <section class="status-section" id="status">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Live Data</span>
-        <h2 class="section-title">Server Status</h2>
-        <p class="section-sub">Real-time metrics updated every 30 seconds</p>
+        <span class="section-tag">Élő adatok</span>
+        <h2 class="section-title">Szerver állapot</h2>
+        <p class="section-sub">Valós idejű mérőszámok, 30 másodpercenként frissítve</p>
       </div>
 
       <div class="status-grid">
-        <!-- Card 1: Player Count -->
         <div class="status-card card-gold" id="cardPlayers">
           <div class="card-header">
             <div class="card-icon card-icon-gold">
@@ -155,61 +152,54 @@
               </svg>
             </div>
             <div class="card-meta">
-              <span class="card-label">Online Players</span>
-              <span class="card-live"><span class="live-dot live-dot-gold"></span>Live</span>
+              <span class="card-label">Online játékosok</span>
+              <span class="card-live"><span class="live-dot live-dot-gold"></span>Élő</span>
             </div>
-            <div class="card-trend trend-up">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
-                <polyline points="17 6 23 6 23 12" />
-              </svg>
-              +12%
-            </div>
+            <div class="card-trend trend-neutral" id="playerTrend">—</div>
           </div>
           <div class="card-value">
-            <span class="big-num" id="cardPlayerNum">847</span>
+            <span class="big-num" id="cardPlayerNum">—</span>
             <span class="big-denom">/ 1000</span>
           </div>
           <div class="card-progress">
             <div class="progress-bar">
-              <div class="progress-fill fill-gold" style="width: 84.7%"></div>
+              <div class="progress-fill fill-gold" id="playerBar" style="width: 0%"></div>
             </div>
-            <span class="progress-label">84.7% capacity</span>
+            <span class="progress-label" id="playerBarLabel">Folyamatban...</span>
           </div>
           <div class="card-chart-wrap">
             <canvas id="chartPlayers" class="card-chart"></canvas>
-            <div class="chart-label-gold">24h Player Activity</div>
+            <div class="chart-label-gold">24 órás aktivitás</div>
           </div>
         </div>
 
-        <!-- Card 2: Server Performance -->
-        <div class="status-card card-green" id="cardPerf">
+        <div class="status-card card-blue" id="cardPerf">
           <div class="card-header">
-            <div class="card-icon card-icon-green">
+            <div class="card-icon card-icon-blue">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
               </svg>
             </div>
             <div class="card-meta">
-              <span class="card-label">Server Performance</span>
-              <span class="card-live"><span class="live-dot live-dot-green"></span>Live</span>
+              <span class="card-label">Szerver teljesítmény</span>
+              <span class="card-live"><span class="live-dot live-dot-blue"></span>Élő</span>
             </div>
             <div class="card-trend trend-up">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
                 <polyline points="17 6 23 6 23 12" />
               </svg>
-              Stable
+              Stabil
             </div>
           </div>
           <div class="card-value">
-            <span class="big-num accent-green-text" id="cardPing">24</span>
+            <span class="big-num accent-blue-text" id="cardPing">—</span>
             <span class="big-denom">ms</span>
           </div>
           <div class="card-metrics">
             <div class="metric-pill">
-              <span class="metric-dot dot-green"></span>
-              <span>TPS: <strong>20/20</strong></span>
+              <span class="metric-dot dot-blue"></span>
+              <span>TPS: <strong id="tpsVal">Folyamatban</strong></span>
             </div>
             <div class="metric-pill">
               <span class="metric-dot dot-gold"></span>
@@ -218,12 +208,11 @@
           </div>
           <div class="card-chart-wrap">
             <canvas id="chartPerf" class="card-chart"></canvas>
-            <div class="chart-label-green">24h Ping Stability</div>
+            <div class="chart-label-blue">24 órás ping stabilitás</div>
           </div>
         </div>
       </div>
 
-      <!-- Server info strip -->
       <div class="server-strip">
         <div class="server-strip-item">
           <svg class="strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -231,7 +220,7 @@
             <line x1="8" y1="21" x2="16" y2="21" />
             <line x1="12" y1="17" x2="12" y2="21" />
           </svg>
-          <span class="strip-label">Version</span>
+          <span class="strip-label">Verzió</span>
           <span class="strip-val">MTA 1.6.0</span>
         </div>
         <div class="server-strip-item">
@@ -239,7 +228,7 @@
             <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" />
             <circle cx="12" cy="10" r="3" />
           </svg>
-          <span class="strip-label">Region</span>
+          <span class="strip-label">Régió</span>
           <span class="strip-val">EU · Frankfurt</span>
         </div>
         <div class="server-strip-item">
@@ -248,26 +237,25 @@
             <polyline points="12 6 12 12 16 14" />
           </svg>
           <span class="strip-label">Uptime</span>
-          <span class="strip-val accent-green-text">99.98%</span>
+          <span class="strip-val accent-blue-text">99.98%</span>
         </div>
         <div class="server-strip-item">
           <svg class="strip-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
             <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
           </svg>
           <span class="strip-label">Anti-Cheat</span>
-          <span class="strip-val">Active</span>
+          <span class="strip-val">Aktív</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FEATURES ═══ -->
   <section class="features-section" id="features">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">Why Us</span>
-        <h2 class="section-title">Built for <span class="accent-green">Serious</span> Roleplayers</h2>
-        <p class="section-sub">Every system crafted with immersion in mind</p>
+        <span class="section-tag">Miért mi?</span>
+        <h2 class="section-title">Komoly <span class="accent-blue">roleplayereknek</span> készítve</h2>
+        <p class="section-sub">Minden rendszer az elmélyülést szem előtt tartva lett megalkotva</p>
       </div>
 
       <div class="features-grid">
@@ -278,24 +266,24 @@
               <path d="M16 8h-6a2 2 0 000 4h4a2 2 0 010 4H8M12 6v2m0 8v2" />
             </svg>
           </div>
-          <h3 class="feature-title">Living Economy</h3>
-          <p class="feature-desc">Player-driven markets, businesses, and a fully dynamic economy system that reacts to
-            your actions.</p>
-          <div class="feature-tag">Dynamic</div>
+          <h3 class="feature-title">Élő gazdaság</h3>
+          <p class="feature-desc">Játékosok által vezérelt piacok, vállalkozások és egy teljesen dinamikus gazdasági
+            rendszer.</p>
+          <div class="feature-tag">Dinamikus</div>
         </div>
 
         <div class="feature-card" id="feat-factions">
-          <div class="feature-icon-wrap green-glow">
+          <div class="feature-icon-wrap blue-glow">
             <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" />
               <circle cx="9" cy="7" r="4" />
               <path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75" />
             </svg>
           </div>
-          <h3 class="feature-title">Factions & Gangs</h3>
-          <p class="feature-desc">Join law enforcement, criminal organizations, or form your own faction. Shape the
-            politics of the city.</p>
-          <div class="feature-tag">Immersive</div>
+          <h3 class="feature-title">Frakciók és bandák</h3>
+          <p class="feature-desc">Csatlakozz a rendfenntartó erőkhöz, bűnszervezetekhez, vagy alapíts saját frakciót és
+            alakítsd a város politikáját.</p>
+          <div class="feature-tag">Immerzív</div>
         </div>
 
         <div class="feature-card" id="feat-housing">
@@ -305,23 +293,23 @@
               <polyline points="9 22 9 12 15 12 15 22" />
             </svg>
           </div>
-          <h3 class="feature-title">Real Estate</h3>
-          <p class="feature-desc">Buy, sell and rent properties. Customize your home, run businesses, or own an empire
-            of real estate.</p>
-          <div class="feature-tag">Ownership</div>
+          <h3 class="feature-title">Ingatlanok</h3>
+          <p class="feature-desc">Vegyél, adj el és bérelj ingatlanokat. Testreszabhatod az otthonod, vagy felépíthetsz
+            egy ingatlanbirodalmat.</p>
+          <div class="feature-tag">Tulajdon</div>
         </div>
 
         <div class="feature-card" id="feat-vehicles">
-          <div class="feature-icon-wrap green-glow">
+          <div class="feature-icon-wrap blue-glow">
             <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <path
                 d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v9a2 2 0 01-2 2h-1M9 21a2 2 0 100-4 2 2 0 000 4zM20 21a2 2 0 100-4 2 2 0 000 4zM3 9h11" />
             </svg>
           </div>
-          <h3 class="feature-title">Vehicle System</h3>
-          <p class="feature-desc">Hundreds of vehicles with realistic mechanics, custom tuning, and an advanced license
-            and insurance system.</p>
-          <div class="feature-tag">Realistic</div>
+          <h3 class="feature-title">Járműrendszer</h3>
+          <p class="feature-desc">Több száz jármű valósághű mechanikával, egyedi tuninggal és egy fejlett jogosítvány-
+            és biztosítási rendszerrel.</p>
+          <div class="feature-tag">Életszerű</div>
         </div>
 
         <div class="feature-card feature-card-wide" id="feat-legal">
@@ -330,14 +318,15 @@
               <path d="M3 6l9-4 9 4v6c0 5.25-3.75 10.15-9 11.25C6.75 22.15 3 17.25 3 12V6z" />
             </svg>
           </div>
-          <h3 class="feature-title">Legal & Criminal Systems</h3>
-          <p class="feature-desc">A complete justice system with courts, lawyers, jails, and police departments. Every
-            crime has consequences — every criminal has a story.</p>
-          <div class="feature-tag">Deep</div>
+          <h3 class="feature-title">Legal & Criminal Rendszerek</h3>
+          <p class="feature-desc">Egy teljes körű igazságszolgáltatási rendszer bíróságokkal, ügyvédekkel, börtönökkel
+            és rendőrségekkel. Minden
+            bűncselekménynek vannak következményei – minden bűnözőnek megvan a maga története.</p>
+          <div class="feature-tag">Mély</div>
         </div>
 
         <div class="feature-card feature-card-wide" id="feat-events">
-          <div class="feature-icon-wrap green-glow">
+          <div class="feature-icon-wrap blue-glow">
             <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
               <rect x="3" y="4" width="18" height="18" rx="2" />
               <line x1="16" y1="2" x2="16" y2="6" />
@@ -345,46 +334,44 @@
               <line x1="3" y1="10" x2="21" y2="10" />
             </svg>
           </div>
-          <h3 class="feature-title">Weekly Events</h3>
-          <p class="feature-desc">Staff-run events, city elections, turf wars, and in-game stories that keep the world
-            alive. Something always happening.</p>
-          <div class="feature-tag">Events</div>
+          <h3 class="feature-title">Heti események</h3>
+          <p class="feature-desc">Admin által szervezett események, városi választások, területi háborúk és játékbeli
+            történetek. Mindig történik valami.</p>
+          <div class="feature-tag">Események</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ CTA BANNER ═══ -->
   <section class="cta-section" id="cta">
     <div class="cta-bg"></div>
     <div class="container">
       <div class="cta-content">
         <div class="cta-text">
-          <h2 class="cta-title">Ready to Begin Your Story?</h2>
-          <p class="cta-sub">Join thousands of players in the most immersive GTA Roleplay experience.</p>
+          <h2 class="cta-title">Készen állsz a saját történetedre?</h2>
+          <p class="cta-sub">Csatlakozz több ezer játékoshoz a legélethűbb GTA Roleplay élményen.</p>
         </div>
         <div class="cta-actions">
-          <a href="#" class="btn btn-primary btn-lg" id="cta-play-btn">Start Playing Free</a>
+          <a href="#" class="btn btn-primary btn-lg" id="cta-play-btn">Játssz ingyen</a>
           <a href="#" class="btn btn-ghost btn-lg" id="cta-discord-btn">
             <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
               <path
                 d="M20.317 4.37a19.791 19.791 0 00-4.885-1.515.074.074 0 00-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 00-5.487 0 12.64 12.64 0 00-.617-1.25.077.077 0 00-.079-.037A19.736 19.736 0 003.677 4.37a.07.07 0 00-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 00.031.057 19.9 19.9 0 005.993 3.03.078.078 0 00.084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 00-.041-.106 13.107 13.107 0 01-1.872-.892.077.077 0 01-.008-.128 10.2 10.2 0 00.372-.292.074.074 0 01.077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 01.078.01c.12.098.246.198.373.292a.077.077 0 01-.006.127 12.299 12.299 0 01-1.873.892.077.077 0 00-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 00.084.028 19.839 19.839 0 006.002-3.03.077.077 0 00.032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 00-.031-.03z" />
             </svg>
-            Join Discord
+            Discord szerver
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ═══ FOOTER ═══ -->
   <footer class="footer" id="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
           <img src="logo.png" alt="Logo" class="footer-logo">
-          <p class="footer-tagline">Project Reality<br><span class="accent-green">MTA San Andreas</span></p>
-          <p class="footer-about">The leading roleplay community for GTA San Andreas. Est. 2018.</p>
+          <p class="footer-tagline">Project Reality<br><span class="accent-blue">MTA San Andreas</span></p>
+          <p class="footer-about">Magyarország vezető roleplay közössége GTA San Andreasban. Est. 2018.</p>
           <div class="footer-socials">
             <a href="#" class="social-btn" aria-label="Discord" id="social-discord">
               <svg viewBox="0 0 24 24" fill="currentColor">
@@ -408,43 +395,43 @@
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Navigate</h4>
+          <h4 class="footer-col-title">Navigáció</h4>
           <ul class="footer-links">
-            <li><a href="#" id="fl-home">Home</a></li>
-            <li><a href="#" id="fl-news">News</a></li>
-            <li><a href="#" id="fl-forum">Forum</a></li>
-            <li><a href="#" id="fl-rules">Server Rules</a></li>
+            <li><a href="#" id="fl-home">Főoldal</a></li>
+            <li><a href="#" id="fl-news">Hírek</a></li>
+            <li><a href="#" id="fl-forum">Fórum</a></li>
+            <li><a href="#" id="fl-rules">Szabályok</a></li>
             <li><a href="#" id="fl-wiki">Wiki</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Community</h4>
+          <h4 class="footer-col-title">Közösség</h4>
           <ul class="footer-links">
             <li><a href="#" id="fl-discord">Discord</a></li>
-            <li><a href="#" id="fl-register">Register</a></li>
-            <li><a href="#" id="fl-factions">Factions</a></li>
-            <li><a href="#" id="fl-leaderboard">Leaderboard</a></li>
+            <li><a href="#" id="fl-register">Regisztráció</a></li>
+            <li><a href="#" id="fl-factions">Frakciók</a></li>
+            <li><a href="#" id="fl-leaderboard">Ranglista</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4 class="footer-col-title">Support</h4>
+          <h4 class="footer-col-title">Támogatás</h4>
           <ul class="footer-links">
-            <li><a href="#" id="fl-donate">Premium Shop</a></li>
-            <li><a href="#" id="fl-appeals">Ban Appeals</a></li>
-            <li><a href="#" id="fl-reports">Player Reports</a></li>
-            <li><a href="#" id="fl-contact">Contact Us</a></li>
+            <li><a href="#" id="fl-donate">Prémium Shop</a></li>
+            <li><a href="#" id="fl-appeals">Kitiltás fellebbezés</a></li>
+            <li><a href="#" id="fl-reports">Játékos bejelentés</a></li>
+            <li><a href="#" id="fl-contact">Kapcsolat</a></li>
           </ul>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-legal">© 2024 Project Reality MTA. All rights reserved. Not affiliated with Rockstar Games or
-          Multi Theft Auto.</p>
+        <p class="footer-legal">© 2024 Project Reality MTA. Minden jog fenntartva. Nem áll kapcsolatban a Rockstar Games
+          vagy a Multi Theft Auto csapatával.</p>
         <div class="footer-bottom-links">
-          <a href="#" id="fl-privacy">Privacy Policy</a>
-          <a href="#" id="fl-terms">Terms of Service</a>
+          <a href="#" id="fl-privacy">Adatvédelmi irányelvek</a>
+          <a href="#" id="fl-terms">Felhasználási feltételek</a>
         </div>
       </div>
     </div>
