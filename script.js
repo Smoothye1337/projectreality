@@ -1,17 +1,16 @@
 /* ═══════════════════════════════════════════════════════════
    PROJECT REALITY — MTA San Andreas Roleplay
    JavaScript v1.0
+   Smoothye
 ═══════════════════════════════════════════════════════════ */
 
 'use strict';
 
-// ─── NAVBAR SCROLL ───────────────────────────────────────
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 40);
 }, { passive: true });
 
-// ─── HAMBURGER MENU ──────────────────────────────────────
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.getElementById('navLinks');
 hamburger?.addEventListener('click', () => {
@@ -26,7 +25,6 @@ hamburger?.addEventListener('click', () => {
   }
 });
 
-// ─── COPY ADDRESS ────────────────────────────────────────
 function copyAddr() {
   const addr = document.getElementById('serverAddr')?.textContent;
   if (!addr) return;
@@ -34,13 +32,12 @@ function copyAddr() {
     const btn = document.getElementById('copyBtn');
     if (!btn) return;
     const orig = btn.innerHTML;
-    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>`;
+    btn.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="#2090c8" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>`;
     setTimeout(() => btn.innerHTML = orig, 1800);
   });
 }
 window.copyAddr = copyAddr;
 
-// ─── SMOOTH REVEAL ON SCROLL ─────────────────────────────
 function initReveal() {
   const items = document.querySelectorAll(
     '.status-card, .feature-card, .server-strip-item, .cta-content'
@@ -59,7 +56,6 @@ function initReveal() {
   items.forEach(el => observer.observe(el));
 }
 
-// ─── ANIMATED COUNTER ────────────────────────────────────
 function animateCounter(el, target, duration = 1800, suffix = '') {
   if (!el) return;
   const start = performance.now();
@@ -73,28 +69,7 @@ function animateCounter(el, target, duration = 1800, suffix = '') {
   requestAnimationFrame(update);
 }
 
-// ─── LIVE DATA SIMULATION ────────────────────────────────
-let playerCount = 847;
-function simulateLiveData() {
-  const delta = Math.floor(Math.random() * 7) - 3;
-  playerCount = Math.max(500, Math.min(1000, playerCount + delta));
 
-  const heroEl = document.getElementById('heroPlayers');
-  const cardEl = document.getElementById('cardPlayerNum');
-  const pingEl = document.getElementById('cardPing');
-
-  if (heroEl) heroEl.textContent = playerCount;
-  if (cardEl) cardEl.textContent = playerCount;
-  if (pingEl) pingEl.textContent = Math.floor(Math.random() * 8) + 20;
-
-  // update progress bar
-  const fill = document.querySelector('.fill-gold');
-  if (fill) fill.style.width = (playerCount / 10) + '%';
-  const pLabel = document.querySelector('.progress-label');
-  if (pLabel) pLabel.textContent = (playerCount / 10).toFixed(1) + '% capacity';
-}
-
-// ─── PARTICLE SYSTEM ─────────────────────────────────────
 function createParticles() {
   const container = document.getElementById('heroParticles');
   if (!container) return;
@@ -121,7 +96,6 @@ function createParticles() {
     `;
     container.appendChild(p);
 
-    // limit particles
     const particles = container.querySelectorAll('div');
     if (particles.length > 60) particles[0].remove();
   }
@@ -130,7 +104,6 @@ function createParticles() {
   setInterval(spawnParticle, 800);
 }
 
-// ─── LINE CHARTS ─────────────────────────────────────────
 function drawChart(canvasId, color, glowColor, data) {
   const canvas = document.getElementById(canvasId);
   if (!canvas) return;
@@ -159,12 +132,10 @@ function drawChart(canvasId, color, glowColor, data) {
     y: pad.top + ih - ((v - min) / range) * ih
   }));
 
-  // Gradient fill
   const fillGrad = ctx.createLinearGradient(0, pad.top, 0, h);
   fillGrad.addColorStop(0, glowColor.replace(')', ', 0.25)').replace('rgb', 'rgba'));
   fillGrad.addColorStop(1, 'rgba(0,0,0,0)');
 
-  // Draw fill area
   ctx.beginPath();
   ctx.moveTo(points[0].x, h);
   points.forEach(p => ctx.lineTo(p.x, p.y));
@@ -173,7 +144,6 @@ function drawChart(canvasId, color, glowColor, data) {
   ctx.fillStyle = fillGrad;
   ctx.fill();
 
-  // Glow line (wide)
   ctx.beginPath();
   points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.strokeStyle = color;
@@ -184,7 +154,6 @@ function drawChart(canvasId, color, glowColor, data) {
   ctx.lineCap = 'round';
   ctx.stroke();
 
-  // Bright center line
   ctx.beginPath();
   points.forEach((p, i) => i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y));
   ctx.strokeStyle = '#ffffff';
@@ -194,7 +163,6 @@ function drawChart(canvasId, color, glowColor, data) {
   ctx.stroke();
   ctx.globalAlpha = 1;
 
-  // Dot at end
   const last = points[points.length - 1];
   ctx.beginPath();
   ctx.arc(last.x, last.y, 4, 0, Math.PI * 2);
@@ -204,7 +172,6 @@ function drawChart(canvasId, color, glowColor, data) {
   ctx.fill();
 }
 
-// Generate realistic-looking chart data
 function genPlayerData() {
   const base = [620, 680, 710, 740, 790, 820, 810, 835, 847, 860, 850, 865, 840, 855, 870, 847, 830, 845, 860, 847, 820, 810, 800, 810];
   return base.map(v => v + (Math.random() - 0.5) * 20);
@@ -232,7 +199,6 @@ function initCharts() {
   });
 }
 
-// Animate charts drawing in
 function animateChartDraw(canvasId, color, glowColor, data) {
   let frame = 0;
   const totalFrames = 60;
@@ -248,7 +214,6 @@ function animateChartDraw(canvasId, color, glowColor, data) {
   tick();
 }
 
-// ─── CHART CANVAS RESIZE OBSERVER ────────────────────────
 function observeChartCanvases() {
   const playerData = genPlayerData();
   const pingData = genPingData();
@@ -260,7 +225,7 @@ function observeChartCanvases() {
         drawn = true;
         setTimeout(() => {
           animateChartDraw('chartPlayers', '#ffc246', 'rgb(255,194,70)', playerData);
-          animateChartDraw('chartPerf', '#00ff88', 'rgb(0,255,136)', pingData);
+          animateChartDraw('chartPerf', '#2090c8', 'rgb(32,144,200)', pingData);
         }, 300);
         observer.disconnect();
       }
@@ -271,17 +236,8 @@ function observeChartCanvases() {
   if (statusSection) observer.observe(statusSection);
 }
 
-// ─── INIT ─────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initReveal();
   createParticles();
   observeChartCanvases();
-
-  // Live data updates
-  setInterval(simulateLiveData, 5000);
-
-  // Animate hero player count on load
-  setTimeout(() => {
-    animateCounter(document.getElementById('heroPlayers'), 847, 1600);
-  }, 600);
 });
